@@ -1,0 +1,18 @@
+<h1>Something about us</h1>
+
+
+<form action="/about" method='get'>
+  <input type="text" name="member" placeholder='search for...'>
+  <input type="submit">
+</form>
+
+
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
+
+<%= link_to 'Contacts', contact_path %>
+
+<p>Time is now <%= Time.now %></p>
